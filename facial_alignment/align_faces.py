@@ -1,5 +1,5 @@
 # USAGE
-# python align_faces.py --shape-predictor shape_predictor_68_face_landmarks.dat --image images/example_01.jpg
+# python align_faces.py --shape-predictor shape_predictor_68_face_landmarks.dat --folder /path/to/image/folder
 
 # import the necessary packages
 from imutils.face_utils import FaceAligner
