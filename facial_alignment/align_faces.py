@@ -47,12 +47,11 @@ for image in images:
     # loop over the face detections
     for rect in rects:
         # extract the ROI of the *original* face, then align the face
-	# using facial landmarks
-	(x, y, w, h) = rect_to_bb(rect)
-	faceOrig = imutils.resize(image[y:y + h, x:x + w], width=256)
-	faceAligned = fa.align(image, gray, rect)
-            
-	import uuid
-	f = str(uuid.uuid4())
-	cv2.imwrite("aligned/" + f + ".png", faceAligned)
-
+        # using facial landmarks
+        (x, y, w, h) = rect_to_bb(rect)
+        faceOrig = imutils.resize(image[y:y + h, x:x + w], width=256)
+        faceAligned = fa.align(image, gray, rect)
+         
+        import uuid
+        f = str(uuid.uuid4())
+        cv2.imwrite("aligned/" + f + ".png", faceAligned)
